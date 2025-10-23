@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//programando movimentação para a torre, tantop para a esquerda quanto para direita
 void MoverTorre (int casas) {
     if (casas > 0) {
     printf("esquerda\n");
@@ -10,6 +10,7 @@ void MoverTorre (int casas) {
     }
 
 }
+//movimentação do cavalo em "L", duas casas para cima e uma para direita
 void MoverCavalo (int Cavalo){
     int i, j;
     for (i = 0; i < 2; i++) {
@@ -23,6 +24,7 @@ void MoverCavalo (int Cavalo){
     }
     
 }
+//movmendo o bispo na diagonal para a direita superior
 void MoverBispo(int Bispo) {
     int x, y;
     for (x = 0; x < Bispo; x++) {
@@ -33,6 +35,7 @@ void MoverBispo(int Bispo) {
         }
     }
 }
+//movendo a rainha, assim como a torre
 void MoverRainha(int Rainha) {
     if (Rainha < 0) {
         printf("esquerda\n");
@@ -43,11 +46,8 @@ void MoverRainha(int Rainha) {
     }
 }
 
-    
-
-
 int main() {
-
+//chamando as funções recursivas com seus respectivos valores esperados para movimentação de cada peça
     printf (" movimentação do cavalo \n");
     MoverCavalo(0);
 
